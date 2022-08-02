@@ -27,7 +27,7 @@ position	Active/New	rule name if group (grp) used	src.1	src.2	port	dst.1	dst.2	d
 4	Active	allow-sgall-to-mdg-usw1-prod	GRPNET-ap-sg-rhq-all-001	GRPNET-ap-sg-rhq-all-001	Any	az-us-usw1-mdg-prd-fiori-001	az-us-usw1-mdg-lbfe-pm1-ascs-001	az-us-usw1-pwflapp01-001	az-us-usw1-pwflapp02-001	az-us-usw1-pm1lapp10-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	Any	https	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	Accept	None	NA
 ```
 
-Cell valis duplicated across remaining column enteries,wherever object/group count is less than max.
+Cell values are duplicated across remaining column enteries,wherever object/group count is less than max.
 
 ---
 Process:
@@ -42,4 +42,5 @@ Process:
 External Links:
 
 Mgmt REST API: <https://sc1.checkpoint.com/documents/latest/APIs/#web/add-access-rule~v1.8%20>
+
 MGMT_CLI Batch Cmd: <https://supportcenter.checkpoint.com/supportcenter/portal?action=portlets.SearchResultMainAction&eventSubmit_doGoviewsolutiondetails=&solutionid=sk113078>
