@@ -1,4 +1,4 @@
-﻿position,Active/New,rule name if group (grp) used,src,port,dst,port (port names),protocol,action,Logging ,comments
+﻿position,Active/New,rule name if group (grp) used,src,port,dst,protocol,service,action,Logging,comments
 1,Active,MDM server to Firewall allow,Host_198.18.251.12,Any,Any,Any,Any,Accept,Log,
 2,Active,Firewall to MDM server allow,Any,Any,Host_198.18.251.12,Any,Any,Accept,Log,
 3,Active,allow-sgall-to-s4-usw1-prod,GRPNET-ap-sg-rhq-all-001,Any,"az-us-usw1-s4-prd-fiori-001;
