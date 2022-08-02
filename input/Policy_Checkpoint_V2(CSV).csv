@@ -1,0 +1,37 @@
+﻿position,name,src,port,dst,service,protocol,action,Logging ,comments
+1,MDM to Firewall,Host_198.18.251.12,Any,Any,Any,Any,Permit,Log,
+2,Firewall to MDM,Any,Any,Host_198.18.251.12,Any,Any,Permit,Log,
+3,Yoda to Firewall,Yoda-pri-198.18.253.0-28;APE_10.50.84.172,Any,Any,Any,Any,Permit,Log,
+4,Firewall to Yoda,Any,Any,"Yoda-pri-198.18.253.0-28;
+APE_10.50.84.172",Any,Any,Permit,Log,
+5,allow-deall-use2all,GRPNET-em-de-dusseldorf-all-001,Any,net-az-us-use2-vnetsubnet-001,Any,Any,Permit,Log,
+6,allow-use2-deall,net-az-us-use2-vnetsubnet-001,Any,GRPNET-em-de-dusseldorf-all-001,Any,Any,Permit,Log,
+7,allow-deall-usw1all,GRPNET-em-de-dusseldorf-all-001,Any,net-az-us-usw1-vnetsubet-001,Any,Any,Permit,Log,
+8,allow-usw1-deall,net-az-us-usw1-vnetsubet-001,Any,GRPNET-em-de-dusseldorf-all-001,Any,Any,Permit,Log,
+9,allow-deall-to-usw1nwhub,GRPNET-em-de-dusseldorf-all-001,Any,net-az-us-usw1-nwhubvnetsubnet-001,Any,Any,Permit,Log,
+10,allow-usw1nwhub-to-deall,net-az-us-usw1-nwhubvnetsubnet-001,Any,GRPNET-em-de-dusseldorf-all-001,Any,Any,Permit,Log,
+11,allow-deall-to-jpe1,GRPNET-em-de-dusseldorf-all-001,Any,net-az-jp-jpe1-vnetsubnet-001,Any,Any,Permit,Log,
+12,allow-jpe1-to-deall,net-az-jp-jpe1-vnetsubnet-001,Any,GRPNET-em-de-dusseldorf-all-001,Any,Any,Permit,Log,
+13,allow-deall-to-jpe1nwhub,GRPNET-em-de-dusseldorf-all-001,Any,net-az-jp-jpe1-nwhubvnetsubnet-001,Any,Any,Permit,Log,
+14,allow-jpe1nwhub-to-deall,net-az-jp-jpe1-nwhubvnetsubnet-001,Any,GRPNET-em-de-dusseldorf-all-001,Any,Any,Permit,Log,
+15,allow-sgall-to-deall,GRPNET-ap-sg-rhq-all-001,Any,GRPNET-em-de-dusseldorf-all-001,Any,Any,Permit,Log,
+16,allow-deall-to-sgall,GRPNET-em-de-dusseldorf-all-001,Any,GRPNET-ap-sg-rhq-all-001,Any,Any,Permit,Log,
+17,allow-sacall-to-deall,GRPNET-am-us-sac-all-001,Any,GRPNET-em-de-dusseldorf-all-001,Any,Any,Permit,Log,
+18,allow-deall-to-sacall,GRPNET-em-de-dusseldorf-all-001,Any,GRPNET-am-us-sac-all-001,Any,Any,Permit,Log,
+19,allow-deall-to-stwall,GRPNET-em-de-dusseldorf-all-001,Any,GRPNET-ap-tw-stw-all-001,Any,Any,Permit,Log,
+20,allow-stwall-to-deall,GRPNET-ap-tw-stw-all-001,Any,GRPNET-em-de-dusseldorf-all-001,Any,Any,Permit,Log,
+21,allow-deall-to-emeaall,GRPNET-em-de-dusseldorf-all-001,Any,GRPNET-em-fr-emea-all-001,Any,Any,Permit,Log,Emea Region inter-site
+22,allow-emeaall-to-deall,GRPNET-em-fr-emea-all-001,Any,GRPNET-em-de-dusseldorf-all-001,Any,Any,Permit,Log,Emea Region inter-site
+23,allow-beall-to-deall,GRPNET-em-be-bruxelles-all-001,Any,GRPNET-em-de-dusseldorf-all-001,Any,Any,Permit,Log,Emea Region inter-site
+24,allow-deall-to-beall,GRPNET-em-de-dusseldorf-all-001,Any,GRPNET-em-be-bruxelles-all-001,Any,Any,Permit,Log,Emea Region inter-site
+25,allow-chall-to-deall,GRPNET-em-ch-geneve-all-001,Any,GRPNET-em-de-dusseldorf-all-001,Any,Any,Permit,Log,Emea Region inter-site
+26,allow-deall-to-chall,GRPNET-em-de-dusseldorf-all-001,Any,GRPNET-em-ch-geneve-all-001,Any,Any,Permit,Log,Emea Region inter-site
+27,allow-nlall-to-deall,GRPNET-em-nl-schiphol-all-001,Any,GRPNET-em-de-dusseldorf-all-001,Any,Any,Permit,Log,Emea Region inter-site
+28,allow-emeaall-to-nlall,GRPNET-em-de-dusseldorf-all-001,Any,GRPNET-em-nl-schiphol-all-001,Any,Any,Permit,Log,Emea Region inter-site
+29,allow-deall-to-jpall,GRPNET-em-de-dusseldorf-all-001,Any,GRPNET-jp-jp-kdc-all-001,Any,Any,Permit,Log,Emea Region inter-site
+30,allow-jpall-to-deall,GRPNET-jp-jp-kdc-all-001,Any,GRPNET-em-de-dusseldorf-all-001,Any,Any,Permit,Log,Emea Region inter-site
+31,allow-deall-to-internet,GRPNET-em-de-dusseldorf-all-001,Any,Any,Any,Any,Permit,Log,DEU Internet Access
+32,deny-dewifiguest-to-rfcall,net-em-de-dus-wifiguest-001,Any,"rfc-10.0.0.0/8
+rfc-172.16.0.0/12
+rfc-192.168.0.0/16",Any,Any,Deny,Off,DEU Wifi Guest Access Deny RFC
+33,allow-dewifiguest-to-internet,net-em-de-dus-wifiguest-001,Any,Any,Web / Dns,Any,Permit,Off,DEU Wifi Guest Access Allow Web

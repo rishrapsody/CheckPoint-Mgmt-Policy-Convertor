@@ -1,0 +1,113 @@
+﻿position,name,src,port,dst,service,content,action,Logging ,comments
+1,MDM server to Firewall allow,Host_198.18.251.12,Any,Any,Any,Any,Accept,Log,
+2,Firewall to MDM server allow,Any,Any,Host_198.18.251.12,Any,Any,Accept,Log,
+3,allow-sao1all-to-s4-usw1-prod,net-am-br-sao1-supernet-001,Any,"az-us-usw1-s4-prd-fiori-001;
+az-us-usw1-s4-lbfe-ps1-ascs-001;
+az-us-usw1-pwflapp01-001;
+az-us-usw1-pwflapp02-001;
+az-us-usw1-ps1lapp10-001;
+az-us-usw1-ps1lapp11-001;
+az-us-usw1-pwllapp01-001;
+az-us-usw1-ps1lapp12-001","https;
+sap-ms-3645;
+sap-disp-3202;
+sap-disp-3203;
+sap-disp-3201;
+sap-http-8003;
+sap-http-8002;
+sap-http-8022;
+sap-https-44302;
+sap-https-44303;
+sap-disp-3204;
+sap-https-44304",Any,Accept,Log,Global SAP S4-Fiori and SapGui Production access. 
+4,allow-sao1all-to-mdg-usw1-prod,net-am-br-sao1-supernet-001,Any,"az-us-usw1-mdg-prd-fiori-001;
+az-us-usw1-mdg-lbfe-pm1-ascs-001;
+az-us-usw1-pwflapp01-001;
+az-us-usw1-pwflapp02-001;
+az-us-usw1-pm1lapp10-001;
+az-us-usw1-pm1lapp11-001","https;
+sap-ms-3600;
+sap-disp-3200;
+sap-disp-3210;
+sap-disp-3211;
+sap-disp-3201",Any,Accept,Log,Global SAP MDG-Fiori and SapGui Production access. 
+5,allow-sao1all-to-grc-usw1-prod,net-am-br-sao1-supernet-001,Any,az-us-usw1-pgrlapp01-001,"https;
+sap-disp-3200;
+sap-gw-3300;
+sap-http-8000;
+sap-http-8001",Any,Accept,Log,Global SAP GRC-Fiori and SapGui Production access. 
+6,allow-sao1all-to-solman-usw1-prod,net-am-br-sao1-supernet-001,Any,"az-us-usw1-servl0021-001;
+az-us-usw1-pwllapp01-001","sap-https-50101;
+https",Any,Accept,Log,SAP SOLMAN - Fiori Production access.
+7,allow-sao1all-to-enow-usw1-prod,net-am-br-sao1-supernet-001,Any,az-us-usw1-penwapp01-001,https,Any,Accept,Log,SAP ENABLENOW - WebUI production access.
+8,allow-sao1all-to-pi-po-usw1-prod,net-am-br-sao1-supernet-001,Any,"az-us-usw1-pwflapp01-001;
+az-us-usw1-pwflapp02-001;
+az-us-usw1-ppflapp10-001;
+az-us-usw1-ppflapp11-001","sap-http-51000;
+sap-https-51001;
+sap-http-51100;
+sap-https-51101;
+https;
+http",Any,Accept,Log,SAP PI/PO - Production access. 
+9,allow-sao1all-to-pb1-bi-usw1-prod,net-am-br-sao1-supernet-001,Any,az-us-usw1-pb1lapp01-001,"sap-https-44300;
+sap-gw-3300;
+sap-disp-3200",Any,Accept,Log,PB1 BI Production PB1LAPP01 AS access (production BI)
+10,allow-sao1all-to-S4-usw1-qual-preprod,net-am-br-sao1-supernet-001,Any,"az-us-usw1-qsflapn01-001;
+az-us-usw1-rwflapr01-001;
+az-us-usw1-rwflapr02-001;
+az-us-usw1-rsflapr11-001;
+az-us-usw1-rsflapr12-001;
+az-us-usw1-tsflapn01-001;
+az-us-usw1-ss1lapn01-001;
+az-us-usw1-ss2lapn01-001;
+az-us-usw1-ss3lapn01-001;
+az-us-usw1-ss4lapn01-001;
+az-us-usw1-qgrlapn01-001;
+az-us-usw1-qs1lapn01-001;
+az-us-usw1-qmflapn01-001;
+az-us-usw1-s4-preprod-lbfe-rwf-wd-001;
+az-us-usw1-mdg-qal-lbfe-qmf-ascs-001;
+az-us-usw1-S4-preprod-lbfe-rsf-ascs-001;
+az-us-usw1-tsflapn01-002;
+az-us-usw1-ss1lapn01-002;
+az-us-usw1-dsflapn01-001;
+az-us-usw1-dsflapn01-002;
+az-us-usw1-rsflapr09-001;
+az-us-usw1-rsflapr10-001","sap-https-4301;
+https;
+sap-disp-3210;
+sap-gw-3310;
+sap-disp-3211;
+sap-gw-3311;
+sap-disp-3212;
+sap-gw-3313;
+sap-disp-3201;
+sap-gw-3301;
+sap-ms-3601;
+sap-disp-3200;
+sap-gw-3300;
+sap-disp-3202;
+sap-https-44301;
+sap-https-44302;
+sap-https-8101;
+sap-http-8001;
+sap-ms-3645",Any,Accept,Log,SAP S4-Fiori and SapGui Qualtiy/No Production access. 
+11,allow-sao1all-to-pi-po-usw1-qual-preprod,net-am-br-sao1-supernet-001,Any,"az-us-usw1-dpflapn01-002;
+az-us-usw1-qpflapn01-002","sap-http-50000;
+http",Any,Accept,Log,SAP PI/PO - Qualtiy/No Production access.
+12,allow-sao1all-to-mdg-usw1-qual-preprod,net-am-br-sao1-supernet-001,Any,"az-us-usw1-qmflapr10-001;
+az-us-usw1-qmflapr11-001;
+az-us-usw1-qmflapn01-001","sap-disp-3211;
+sap-https-8101;
+sap-https-44301",Any,Accept,Log,SAP MDG - Qualtiy/No Production access.
+13,allow-sao1all-to-pb1-bi-usw1-qual-dev,net-am-br-sao1-supernet-001,Any,az-us-usw1-qbflapn01-001,sap-https-44300,Any,Accept,Log,QBF BI QA QBFLAPN01 AS access  (BI Non Prod)
+14,deny-gball-to-usw1-all,net-am-br-sao1-supernet-001,Any,net-az-us-usw1-vnetsubet-001,Any,Any,Deny,Log,Deny sao1 to West-US All
+15,deny-gball-to-usw1nwhub-all,net-am-br-sao1-supernet-001,Any,net-az-us-usw1-nwhubvnetsubnet-001,Any,Any,Deny,Log,Deny sao1 to West-US Hub All
+16,allow-sao1-to- jpe1,net-am-br-sao1-supernet-001,Any,net-az-jp-jpe1-vnetsubnet-001,Any,Any,Accept,Log,Allow sao1 to jpe1 all
+17,allow-jpe1-to-sao1 ,net-az-jp-jpe1-vnetsubnet-001,Any,net-am-br-sao1-supernet-001,Any,Any,Accept,Log,Allow jpe1 to sao1 all
+18,allow-sao1-to-jpe1nwhub,net-am-br-sao1-supernet-001,Any,net-az-jp-jpe1-nwhubvnetsubnet-001,Any,Any,Accept,Log,Allow sao1 to jpe1 Hub all
+19,allow-jpe1nwhub-to-sao1,net-az-jp-jpe1-nwhubvnetsubnet-001,Any,net-am-br-sao1-supernet-001,Any,Any,Accept,Log,Allow jpe1Hub to sao1 all
+20,allow-sao1all-to-sacall,net-am-br-sao1-supernet-001,Any,GRPNET-am-us-sac-all-001,Any,Any,Accept,Log,Allow sao1 to sac
+21,allow-sacall-to-sao1all,GRPNET-am-us-sac-all-001,Any,net-am-br-sao1-supernet-001,Any,Any,Accept,Log,Allow sac to sao1 
+22,allow-sao1all-to-jpall,net-am-br-sao1-supernet-001,Any,GRPNET-jp-jp-kdc-all-002,Any,Any,Accept,Log,Allow sao1 to jp
+23,allow-jpall-to-sao1all,GRPNET-jp-jp-kdc-all-002,Any,net-am-br-sao1-supernet-001,Any,Any,Accept,Log,Allow jp to sao1 

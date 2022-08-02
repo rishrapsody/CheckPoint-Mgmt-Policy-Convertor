@@ -1,0 +1,36 @@
+﻿position,name,src,port,dst,service,protocol,action,log,comments
+1,MDM server to Firewall allow,Host_198.18.251.12,any,Any,Any,Any,Accept,Log,
+2,Firewall to MDM server allow,Any,any,Host_198.18.251.12,Any,Any,Accept,Log,
+3,Firewall HA allow,"HA1_NYC-Host-169.254.9.5;
+HA1_NYC-Host-169.254.9.6",any,"HA1_NYC-Host-169.254.9.5;
+HA1_NYC-Host-169.254.9.6",Any,Any,Accept,Log,
+4,BGP,Net_100.64.0.8,any,Net_100.64.0.8,Any,Any,Accept,Log,
+5,allow-sac-uscs1all,GRPNET-am-us-sac-all-001,any,net-az-us-uscs2-vnetsubnet-001,Any,Any,Accept,Log,
+6,allow-uscs1-sacall,net-az-us-uscs2-vnetsubnet-001,any,GRPNET-am-us-sac-all-001,Any,Any,Accept,Log,
+7,allow-sac-usw1all,GRPNET-am-us-sac-all-001,any,net-az-us-usw1-vnetsubet-001,Any,Any,Accept,Log,
+8,allow-usw1-sacall,net-az-us-usw1-vnetsubet-001,any,GRPNET-am-us-sac-all-001,Any,Any,Accept,Log,
+9,allow-sac-to-usw1nwhub,GRPNET-am-us-sac-all-001,any,net-az-us-usw1-nwhubvnetsubnet-001,Any,Any,Accept,Log,
+10,allow-usw1nwhub-to-sac,net-az-us-usw1-nwhubvnetsubnet-001,any,GRPNET-am-us-sac-all-001,Any,Any,Accept,Log,
+11,allow-sth-to-jpe1,GRPNET-am-us-sac-all-001,any,net-az-jp-jpe1-vnetsubnet-001,Any,Any,Accept,Log,
+12,allow-jpe1-to-sth,net-az-jp-jpe1-vnetsubnet-001,any,GRPNET-am-us-sac-all-001,Any,Any,Accept,Log,
+13,allow-sth-to-jpe1nwhub,GRPNET-am-us-sac-all-001,any,net-az-jp-jpe1-nwhubvnetsubnet-001,Any,Any,Accept,Log,
+14,allow-jpe1nwhub-to-sth,net-az-jp-jpe1-nwhubvnetsubnet-001,any,GRPNET-am-us-sac-all-001,Any,Any,Accept,Log,
+15,allow-sacall-to-sgall,GRPNET-am-us-sac-all-001,Any,GRPNET-ap-sg-rhq-all-001,Any,Any,Accept,Log,
+16,allow-sgall-to-sacall,GRPNET-ap-sg-rhq-all-001,Any,GRPNET-am-us-sac-all-001,Any,Any,Accept,Log,
+17,allow-sacall-to-emeaall,GRPNET-am-us-sac-all-001,Any,GRPNET-em-fr-emea-all-001,Any,Any,Accept,Log,
+18,allow-emeaall-to-sacall,GRPNET-em-fr-emea-all-001,Any,GRPNET-am-us-sac-all-001,Any,Any,Accept,Log,
+19,allow-sacall-to-stwall,GRPNET-am-us-sac-all-001,Any,GRPNET-ap-tw-stw-all-001,Any,Any,Accept,Log,
+20,allow-stwall-to-sacall,GRPNET-ap-tw-stw-all-001,Any,GRPNET-am-us-sac-all-001,Any,Any,Accept,Log,
+21,allow-us-to-china,GRPNET-am-us-sac-all-001,Any,GRPNET-ch-ch-sch-users-001,Any,Any,Accept,Log,
+22,allow-china-to-us,GRPNET-ch-ch-sch-users-001,Any,GRPNET-am-us-sac-all-001,Any,Any,Accept,Log,
+23,allow-sacall-to-sao1all,GRPNET-am-us-sac-all-001,Any,net-am-br-sao1-supernet-001,Any,Any,Accept,Log,
+24,allow-sao1all-to-sacall,net-am-br-sao1-supernet-001,Any,GRPNET-am-us-sac-all-001,Any,Any,Accept,Log,
+25,allow-sacall-to-jpall,GRPNET-am-us-sac-all-001,Any,GRPNET-jp-jp-kdc-all-001,Any,Any,Accept,Log,
+26,allow-jpall-to-sacall,GRPNET-jp-jp-kdc-all-001,Any,GRPNET-am-us-sac-all-001,Any,Any,Accept,Log,
+27,allow-sac-to-all,GRPNET-am-us-sac-all-001,any,Any,Any,Any,Accept,Log,
+28,from Yoda,Any,any,"Yoda-pri-198.18.253.0-28;
+Yoda-sec-198.18.254.0-28;
+az-us-usw1-glbwmgh01-001",Any,Any,Accept,Log,
+29,to Yoda,"Yoda-pri-198.18.253.0-28;
+Yoda-sec-198.18.254.0-28;
+az-us-usw1-glbwmgh01-001",any,Any,Any,Any,Accept,Log,

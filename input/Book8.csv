@@ -1,0 +1,29 @@
+﻿position,Active/New,rule name if group (grp) used,src,port,dst,port (port names),protocol,action,Logging ,comments
+1,Active,MDM server to Firewall allow,Host_198.18.251.12,Any,Any,Any,Any,Accept,Log,
+2,Active,Firewall to MDM server allow,Any,Any,Host_198.18.251.12,Any,Any,Accept,Log,
+3,Active,from Yoda,Any,Any,"Yoda-pri-198.18.253.0-28;
+az-us-usw1-glbwmgh01-001;
+Yoda-sec-198.18.254.0-28",Any,Any,Accept,Log,
+4,Active,to Yoda,"Yoda-pri-198.18.253.0-28;
+az-us-usw1-glbwmgh01-001;
+Yoda-sec-198.18.254.0-28",Any,Any,Any,Any,Accept,Log,
+5,Active,BGP Sync,Sync_subnet;ch-hk-shk_Vnet0_Subnet,Any,Sync_subnet;ch-hk-shk_Vnet0_Subnet,Any,Any,Accept,Log,
+6,Remove,internal-to-global,net-ch-hk-shk-original-supernet-001,Any,Any,Any,Any,Accept,Log,
+7,Remove,global-to-internal,Any,Any,net-ch-hk-shk-supernet-001,Any,Any,Accept,Log,
+8,Active,allow-shk-usw1all,GRPNET-ch-hk-shk-original-all-001,Any,net-az-us-usw1-vnetsubet-001,Any,Any,Accept,Log,
+9,Active,allow-usw1-shkall,net-az-us-usw1-vnetsubet-001,Any,GRPNET-ch-hk-shk-all-001,Any,Any,Accept,Log,
+10,Active,allow-shk-to-usw1nwhub,GRPNET-ch-hk-shk-original-all-001,Any,net-az-us-usw1-nwhubvnetsubnet-001,Any,Any,Accept,Log,
+11,Active,allow-usw1nwhub-to-shk,net-az-us-usw1-nwhubvnetsubnet-001,Any,GRPNET-ch-hk-shk-all-001,Any,Any,Accept,Log,
+12,Active,allow-shk-to-jpe1,GRPNET-ch-hk-shk-original-all-001,Any,net-az-jp-jpe1-vnetsubnet-001,Any,Any,Accept,Log,
+13,Active,allow-jpe1-to-shk,net-az-jp-jpe1-vnetsubnet-001,Any,GRPNET-ch-hk-shk-all-001,Any,Any,Accept,Log,
+14,Active,allow-shk-to-jpe1nwhub,GRPNET-ch-hk-shk-original-all-001,Any,net-az-jp-jpe1-nwhubvnetsubnet-001,Any,Any,Accept,Log,
+15,Active,allow-jpe1nwhub-to-shk,net-az-jp-jpe1-nwhubvnetsubnet-001,Any,GRPNET-ch-hk-shk-all-001,Any,Any,Accept,Log,
+16,Add,allow-shk-to-china,GRPNET-ch-hk-shk-original-all-001,Any,GRPNET-ch-ch-sch-users-001,Any,Any,Accept,Log,
+17,Add,allow-china-to-shk,GRPNET-ch-ch-sch-users-001,Any,GRPNET-ch-hk-shk-all-001,Any,Any,Accept,Log,
+18,Add,allow-shk-to-jp,GRPNET-ch-hk-shk-original-all-001,Any,GRPNET-jp-jp-kdc-all-002,Any,Any,Accept,Log,
+19,Add,allow-jp-to-shk,GRPNET-jp-jp-kdc-all-002,Any,GRPNET-ch-hk-shk-all-001,Any,Any,Accept,Log,
+20,,,,,,,,,,
+21,,,,,,,,,,
+22,,,,,,,,,,
+23,,,,,,,,,,
+24,,,,,,,,,,

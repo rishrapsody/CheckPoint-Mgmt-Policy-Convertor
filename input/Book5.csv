@@ -1,0 +1,38 @@
+﻿position,rule name if group (grp) used,src,port,dst,service,protocol,action,Logging,comments
+1,MDM server to Firewall allow,Host_198.18.251.12;MDM-Logserver,Any,Any,Any,Any,Accept,Log,
+2,Firewall to MDM server allow,Any,Any,Host_198.18.251.12;MDM-Logserver,Any,Any,Accept,Log,
+3,Firewall HA allow,"HA1_Host-169.254.12.1;
+HA2_Host-169.254.12.2",Any,HA1_Host-169.254.12.1;HA2_Host-169.254.12.2,Any,Any,Accept,None,
+4,BGP inbound,"Host-100.64.0.20;
+fw-ch-ch-21v-fortigate-001",Any,"host-100.64.0.17;
+fw-ch-ch-21v-vnfchkp-001",Any,Any,Accept,None,
+5,allow-china-usw1all,GRPNET-ch-cn-sch-users-001,Any,net-az-us-usw1-vnetsubet-001,Any,Any,Accept,Log,
+6,allow-usw1-chinaall,net-az-us-usw1-vnetsubet-001,Any,GRPNET-ch-cn-sch-users-001,Any,Any,Accept,Log,
+7,allow-china-to-usw1nwhub,GRPNET-ch-cn-sch-users-001,Any,net-az-us-usw1-nwhubvnetsubnet-001,Any,Any,Accept,Log,
+8,allow-usw1nwhub-to-china,net-az-us-usw1-nwhubvnetsubnet-001,Any,GRPNET-ch-cn-sch-users-001,Any,Any,Accept,Log,
+9,allow-china-to-jpe1,GRPNET-ch-cn-sch-users-001,Any,net-az-jp-jpe1-vnetsubnet-001,Any,Any,Accept,Log,
+10,allow-jpe1-to-china,net-az-jp-jpe1-vnetsubnet-001,Any,GRPNET-ch-cn-sch-users-001,Any,Any,Accept,Log,
+11,allow-china-to-jpe1nwhub,GRPNET-ch-cn-sch-users-001,Any,net-az-jp-jpe1-nwhubvnetsubnet-001,Any,Any,Accept,Log,
+12,allow-jpe1nwhub-to-china,net-az-jp-jpe1-nwhubvnetsubnet-001,Any,GRPNET-ch-cn-sch-users-001,Any,Any,Accept,Log,
+13,allow-china-to-shk,GRPNET-ch-cn-sch-users-001,Any,GRPNET-ch-hk-shk-all-001,Any,Any,Accept,Log,
+14,allow-shk-to-china,GRPNET-ch-hk-shk-all-001,Any,GRPNET-ch-cn-sch-users-001,Any,Any,Accept,Log,
+15,allow-china-to-stw,GRPNET-ch-cn-sch-users-001,Any,GRPNET-ap-tw-stw-all-001,Any,Any,Accept,Log,
+16,allow-stw-to-china,GRPNET-ap-tw-stw-all-001,Any,GRPNET-ch-cn-sch-users-001,Any,Any,Accept,Log,
+17,allow-china-to-sg,GRPNET-ch-cn-sch-users-001,Any,GRPNET-ap-sg-rhq-all-001,Any,Any,Accept,Log,
+18,allow-sg-to-china,GRPNET-ap-sg-rhq-all-001,Any,GRPNET-ch-cn-sch-users-001,Any,Any,Accept,Log,
+19,allow-china-to-us,GRPNET-ch-cn-sch-users-001,Any,GRPNET-am-us-sac-all-001,Any,Any,Accept,Log,
+20,allow-us-to-china,GRPNET-am-us-sac-all-001,Any,GRPNET-ch-cn-sch-users-001,Any,Any,Accept,Log,
+21,allow-china-to-emea,GRPNET-ch-cn-sch-users-001,Any,GRPNET-em-fr-emea-all-001,Any,Any,Accept,Log,
+22,allow-emea-to-china,GRPNET-em-fr-emea-all-001,Any,GRPNET-ch-cn-sch-users-001,Any,Any,Accept,Log,
+23,allow-china-to-jp,GRPNET-ch-cn-sch-users-001,Any,"GRPNET-jp-jp-kdc-all-002
+GRPNET-jp-jp-kdc-all-001",Any,Any,Accept,Log,
+24,allow-jp-to-china,"GRPNET-jp-jp-kdc-all-002
+GRPNET-jp-jp-kdc-all-001",Any,GRPNET-ch-cn-sch-users-001,Any,Any,Accept,Log,
+25,Outbound,"net-ch-cn-sch-userlan-001;
+net-ch-cn-slc-userlan-001;
+net-ch-cn-shop-userlan-001",Any,Any,Any,Any,Accept,Log,
+26,from Yoda,Any,Any,Yoda-pri-198.18.253.0-28;Yoda-sec-198.18.254.0-28;az-us-usw1-glbwmgh01-001,Any,Any,Accept,None,
+27,to Yoda,"Yoda-pri-198.18.253.0-28;
+Yoda-sec-198.18.254.0-28;
+net-jp-jp-kdc-aryakalan-001;
+az-us-usw1-glbwmgh01-001",Any,Any,Any,Any,Accept,None,

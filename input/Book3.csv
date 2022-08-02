@@ -1,0 +1,143 @@
+﻿,name,src,dst,service,protocol,action,Logging ,comments
+1,MDM to Firewall,Host_198.18.251.12,Any,Any,Any,Permit,Log,Aryaka Internal
+2,Firewall to MDM server allow,Any,Host_198.18.251.12,Any,Any,Permit,Log,Aryaka Internal
+3,Yoda to Firewall,Yoda-pri-198.18.253.0-28;APE_10.50.84.172,Any,Any,Any,Permit,Log,Aryaka Internal
+4,Firewall to Yoda,Any,"Yoda-pri-198.18.253.0-28;
+APE_10.50.84.172",Any,Any,Permit,Log,Aryaka Internal
+5,BGP Allow,See em-es-mad-001/002 policy for configuration example,See em-es-mad-001/002 policy for configuration example,bgp,Any,Permit,Log,Aryaka Internal OSPF/BGP Local
+6,OSPF Allow,See em-es-mad-001/002 policy for configuration example,See em-es-mad-001/002 policy for configuration example,ospf,Any,Permit,Log,Aryaka Internal OSPF/BGP Local
+7,allow-gball-to-s4-usw1-prod,GRPNET-em-uk-london-all-001,"az-us-usw1-s4-prd-fiori-001 (10.51.8.10)
+az-us-usw1-s4-lbfe-ps1-ascs-001 (10.51.2.10)
+az-us-usw1-pwflapp01-001 
+az-us-usw1-pwflapp02-001
+az-us-usw1-ps1lapp10-001
+az-us-usw1-ps1lapp11-001
+az-us-usw1-pwllapp01-001
+az-us-usw1-ps1lapp12-001
+","443 (https)
+3645 (sap-ms-3645)
+3202 (sap-disp-3202)
+3203 (sap-disp-3203)
+3645 (sap-ms-3645)
+3201  (sap-disp-3201)
+8003  (sap-http-8003)
+8002  (sap-http-8002)
+8022  (sap-http-8022)
+44302 (sap-https-44302)
+44303 (sap-https-44303)
+3204 (sap-disp-3204)
+44304 (sap-https-44304)",TCP,Permit,Log,Global SAP S4-Fiori and SapGui Production access. 
+8,allow-gball-to-mdg-usw1-prod,GRPNET-em-uk-london-all-002,"az-us-usw1-mdg-prd-fiori-001 (10.51.2.27)
+az-us-usw1-mdg-lbfe-pm1-ascs-001 (10.51.2.27)
+az-us-usw1-pwflapp01-001
+az-us-usw1-pwflapp02-001
+az-us-usw1-pm1lapp10-001
+az-us-usw1-pm1lapp11-001","443 (https)
+3600 (sap-ms-3600)
+3200 (sap-disp-3200)
+3210 (sap-disp-3210)
+3211 (sap-disp-3211)
+3201 (sap-disp-3201)",TCP,Permit,Log,Global SAP MDG-Fiori and SapGui Production access. 
+9,allow-gball-to-grc-usw1-prod,GRPNET-em-uk-london-all-003,az-us-usw1-pgrlapp01-001,"443 (https)
+3200 (sap-disp-3200)
+3300 (sap-gw-3300)
+8000 (sap-http-8000)
+8001 (sap-http-8001)",TCP,Permit,Log,Global SAP GRC-Fiori and SapGui Production access. 
+10,allow-gball-to-solman-usw1-prod,GRPNET-em-uk-london-all-004,"az-us-usw1-servl0021-001
+az-us-usw1-pwllapp01-001","50101 (sap-https-50101)
+443 (https)",TCP,Permit,Log,SAP SOLMAN - Fiori Production access.
+11,allow-gball-to-enow-usw1-prod,GRPNET-em-uk-london-all-005,az-us-usw1-penwapp01-001,443 (https),TCP,Permit,Log,SAP ENABLENOW - WebUI production access.
+12,allow-gball-to-pi-po-usw1-prod,GRPNET-em-uk-london-all-006,"az-us-usw1-pwflapp01-001
+az-us-usw1-pwflapp02-001
+az-us-usw1-ppflapp10-001
+az-us-usw1-ppflapp11-001","51000 (sap-http-51000)
+51001  (sap-https-51001)
+51100  (sap-http-51100)
+51101  (sap-https-51101)
+https
+http",TCP,Permit,Log,SAP PI/PO - Production access. 
+13,allow-gball-to-pb1-bi-usw1-prod,GRPNET-em-uk-london-all-007,az-us-usw1-pb1lapp01-001,"44300 (sap-https-44300)
+3300   (sap-gw-3300)
+3200 (sap-disp-3200)",TCP,Permit,Log,PB1 BI Production PB1LAPP01 AS access (production BI)
+14,allow-gball-to-S4-usw1-qual-preprod,GRPNET-em-uk-london-all-008,"az-us-usw1-qsflapn01-001
+az-us-usw1-s4-preprod-lbfe-rwf-wd-001 (10.51.24.4)
+az-us-usw1-rwflapr01-001
+az-us-usw1-rwflapr02-001
+az-us-usw1-rsflapr11-001
+az-us-usw1-rsflapr12-001
+az-us-usw1-tsflapn01-001
+az-us-usw1-tsflapn01-002   (10.51.35.20)
+az-us-usw1-ss1lapn01-001
+az-us-usw1-ss1lapn01-002 (10.51.37.9)
+az-us-usw1-ss2lapn01-001
+az-us-usw1-ss3lapn01-001
+az-us-usw1-ss4lapn01-001
+az-us-usw1-mdg-qal-lbfe-qmf-ascs-001 (10.51.18.23)
+az-us-usw1-qgrlapn01-001
+az-us-usw1-qs1lapn01-001
+az-us-usw1-qs1lapn01-001
+az-us-usw1-S4-preprod-lbfe-rsf-ascs-001 (10.51.18.25)
+az-us-usw1-dsflapn01-001
+az-us-usw1-dsflapn01-002 (10.51.33.27)
+az-us-usw1-rsflapr09-001 (10.51.18.14)
+az-us-usw1-rsflapr10-001 (10.51.18.29)","4301 (sap-https-4301)
+443 (https)
+3210 (sap-disp-3210)
+3310 (sap-gw-3310)
+3211 (sap-disp-3211)
+3311 (sap-gw-3311)
+3212 (sap-disp-3212)
+3313 (sap-gw-3313)
+3201 (sap-disp-3201)
+3301 (sap-gw-3301)
+3601 (sap-ms-3601)
+3200 (sap-disp-3200)
+3300 (sap-gw-3300)
+3202 (sap-disp-3202)
+44301 (sap-https-44301)
+44302 (sap-https-44302)
+8101 (sap-https-8101)
+8001 (sap-http-8001)
+3645 (sap-ms-3645)",TCP,permit,Log,SAP S4-Fiori and SapGui Qualtiy/No Production access. 
+15,allow-gball-to-pi-po-usw1-qual-preprod,GRPNET-em-uk-london-all-009,"az-us-usw1-dpflapn01-002 (10.51.33.26)
+az-us-usw1-qpflapn01-002 (10.51.35.15)","50000 (sap-http-50000)
+80 (http)",TCP,permit,Log,SAP PI/PO - Qualtiy/No Production access.
+16,allow-gball-to-mdg-usw1-qual-preprod,GRPNET-em-uk-london-all-010,"az-us-usw1-qmflapr10-001
+az-us-usw1-qmflapr11-001
+az-us-usw1-qmflapn01-001","3210 (sap-disp-3210)
+3211 (sap-disp-3211)
+8101 (sap-https-8101)
+44301 (sap-https-44301)
+",TCP,permit,Log,SAP MDG - Qualtiy/No Production access.
+17,allow-gball-to-pb1-bi-usw1-qual-dev,GRPNET-em-uk-london-all-011,az-us-usw1-qbflapn01-001,44300 (sap-https-44300),TCP,permit,Log,QBF BI QA QBFLAPN01 AS access  (BI Non Prod)
+18,deny-gball-to-usw1-all,GRPNET-em-uk-london-all-011,net-az-us-usw1-vnetsubet-001,Any,Any,DENY,Log,Deny GBR Emea to West-US All
+19,deny-gball-to-usw1nwhub-all,GRPNET-em-uk-london-all-011,net-az-us-usw1-nwhubvnetsubnet-001,Any,Any,DENY,Log,Deny GBR Emea to West-US Hub All
+20,allow-gball-to-jpe1,GRPNET-em-uk-london-all-001,net-az-jp-jpe1-vnetsubnet-001,Any,Any,Permit,Log,
+21,allow-jpe1-to-gball,net-az-jp-jpe1-vnetsubnet-001,GRPNET-em-uk-london-all-001,Any,Any,Permit,Log,
+22,allow-gball-to-jpe1nwhub,GRPNET-em-uk-london-all-001,net-az-jp-jpe1-nwhubvnetsubnet-001,Any,Any,Permit,Log,
+23,allow-jpe1nwhub-to-gball,net-az-jp-jpe1-nwhubvnetsubnet-001,GRPNET-em-uk-london-all-001,Any,Any,Permit,Log,
+24,allow-sacall-to-gball,GRPNET-am-us-sac-all-001,GRPNET-em-uk-london-all-001,Any,Any,Permit,Log,
+25,allow-gball-to-sacall,GRPNET-em-uk-london-all-001,GRPNET-am-us-sac-all-001,Any,Any,Permit,Log,
+26,allow-beall-to-gball,GRPNET-em-be-bruxelles-all-001,GRPNET-em-uk-london-all-001,Any,Any,Permit,Log,Emea Region inter-site
+27,allow-gball-to-beall,GRPNET-em-uk-london-all-001,GRPNET-em-be-bruxelles-all-001,Any,Any,Permit,Log,Emea Region inter-site
+28,allow-chall-to-gball,GRPNET-em-ch-geneve-all-001,GRPNET-em-uk-london-all-001,Any,Any,Permit,Log,Emea Region inter-site
+29,allow-gball-to-chall,GRPNET-em-uk-london-all-001,GRPNET-em-ch-geneve-all-001,Any,Any,Permit,Log,Emea Region inter-site
+30,allow-nlall-to-gball,GRPNET-em-nl-schiphol-all-001,GRPNET-em-uk-london-all-001,Any,Any,Permit,Log,Emea Region inter-site
+31,allow-gball-to-nlall,GRPNET-em-uk-london-all-001,GRPNET-em-nl-schiphol-all-001,Any,Any,Permit,Log,Emea Region inter-site
+32,allow-esall-to-gball,GRPNET-em-es-madrid-all-001,GRPNET-em-uk-london-all-001,Any,Any,Permit,Log,Emea Region inter-site
+33,allow-gball-to-esall,GRPNET-em-uk-london-all-001,GRPNET-em-es-madrid-all-001,Any,Any,Permit,Log,Emea Region inter-site
+34,allow-deall-to-gball,GRPNET-em-de-dusseldorf-all-001,GRPNET-em-uk-london-all-001,Any,Any,Permit,Log,Emea Region inter-site
+35,allow-gball-to-esall,GRPNET-em-uk-london-all-001,GRPNET-em-de-dusseldorf-all-001,Any,Any,Permit,Log,Emea Region inter-site
+36,allow-itall-to-gball,GRPNET-em-it-milano-all-001,GRPNET-em-uk-london-all-001,Any,Any,Permit,Log,Emea Region inter-site
+37,allow-gball-to-itall,GRPNET-em-uk-london-all-001,GRPNET-em-it-milano-all-001,Any,Any,Permit,Log,Emea Region inter-site
+38,allow-sifall-to-gball,GRPNET-em-fr-sif-all-001,GRPNET-em-uk-london-all-001,Any,Any,Permit,Log,Emea Region inter-site
+39,allow-gball-to-sifall,GRPNET-em-uk-london-all-001,GRPNET-em-fr-sif-all-001,Any,Any,Permit,Log,Emea Region inter-site
+40,allow-gball-to-emeaall,GRPNET-em-uk-london-all-001,GRPNET-em-fr-emea-all-001,Any,Any,Permit,Log,Emea Region inter-site
+41,allow-emeaall-to-gball,GRPNET-em-fr-emea-all-001,GRPNET-em-uk-london-all-001,Any,Any,Permit,Log,Emea Region inter-site
+42,allow-gball-to-jpall,GRPNET-em-uk-london-all-001,GRPNET-jp-jp-kdc-all-001,Any,Any,Permit,Log,Emea Region inter-site
+43,allow-jpall-to-gball,GRPNET-jp-jp-kdc-all-001,GRPNET-em-uk-london-all-001,Any,Any,Permit,Log,Emea Region inter-site
+44,allow-gball-to-internet,GRPNET-em-uk-london-all-001,Any,Any,Any,Permit,No Log,GBR  Internet Access
+45,deny-dewifiguest-to-rfcall,net-em-uk-lon-wifiguest-001,"rfc-10.0.0.0/8
+rfc-172.16.0.0/12
+rfc-192.168.0.0/16",Any,Any,Deny,Off,GBR Wifi Guest Access Deny RFC
+46,allow-dewifiguest-to-internet,net-em-uk-lon-wifiguest-001,Any,Web / Dns,Any,Permit,Off,GBR Wifi Guest Access Allow Web

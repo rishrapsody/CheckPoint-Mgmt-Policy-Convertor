@@ -1,0 +1,30 @@
+﻿position,Active/New,rule name if group (grp) used,src,port,dst,service,protocol,action,Logging ,comments
+1,Active,MDM to Firewall,Host_198.18.251.12,Any,Any,Any,Any,Accept,Log,
+2,Active,Firewall to MDM,Any,Any,Host_198.18.251.12,Any,Any,Accept,Log,
+3,Active,Yoda to Firewall,Yoda-pri-198.18.253.0-28;az-us-usw1-glbwmgh01-001;Yoda-sec-198.18.254.0-28,Any,Any,Any,Any,Accept,Log,
+4,Active,Firewall to Yoda,Any,Any,"Yoda-pri-198.18.253.0-28;
+az-us-usw1-glbwmgh01-001;
+Yoda-sec-198.18.254.0-28",Any,Any,Accept,Log,
+10,Active,allow-sph-use2all,GRPNET-ap-ph-sph-all-001,any,net-az-us-use2-vnetsubnet-001,any,Any,Accept,Log," Access sph to East-US2 Azure - All temporary catch rule. 
+- added - ** p1lease indicate a date **"
+11,Active,allow-use2-sphall,net-az-us-use2-vnetsubnet-001,any,GRPNET-ap-ph-sph-all-001,any,Any,Accept,Log," Access East-US2 Azure - All to sph  temporary catch rule. 
+- added - ** please indicate a date ** "
+12,Active,allow-sph-usw1all,GRPNET-ap-ph-sph-all-001,any,net-az-us-usw1-vnetsubet-001,any,Any,Accept,Log," Access sph to West-US Azure - All temporary catch rule. 
+- added - ** please indicate a date ** "
+13,Active,allow-usw1-sphall,net-az-us-usw1-vnetsubet-001,any,GRPNET-ap-ph-sph-all-001,any,Any,Accept,Log," Access West-US Azure - All to sph  temporary catch rule. 
+- added - ** please indicate a date ** "
+14,Active,allow-sph-to-usw1nwhub,GRPNET-ap-ph-sph-all-001,any,net-az-us-usw1-nwhubvnetsubnet-001,any,Any,Accept,Log," Access sph to West-US-HUB Azure - All temporary catch rule. 
+- added - ** please indicate a date ** "
+15,Active,allow-usw1nwhub-to-sph,net-az-us-usw1-nwhubvnetsubnet-001,any,GRPNET-ap-ph-sph-all-001,any,Any,Accept,Log," Access West-US-HUB Azure - All to sph  temporary catch rule. 
+- added - ** please indicate a date ** "
+16,Active,allow-sph-to-jpe1,GRPNET-ap-ph-sph-all-001,any,net-az-jp-jpe1-vnetsubnet-001,any,Any,Accept,Log," Access sph  to jpe1 
+- added - ** please indicate a date ** "
+17,Active,allow-jpe1-to-sph,net-az-jp-jpe1-vnetsubnet-001,any,GRPNET-ap-ph-sph-all-001,any,Any,Accept,Log," Access jpe1 to sph
+- added - ** please indicate a date ** "
+18,Active,allow-sph-to-jpe1nwhub,GRPNET-ap-ph-sph-all-001,any,net-az-jp-jpe1-nwhubvnetsubnet-001,any,Any,Accept,Log," Access sph to jpe1nwhub
+- added - ** please indicate a date ** "
+19,Active,allow-jpe1nwhub-to-sph,net-az-jp-jpe1-nwhubvnetsubnet-001,any,GRPNET-ap-ph-sph-all-001,any,Any,Accept,Log," Access jpe1nwhub to sph
+- added - ** please indicate a date ** "
+20,NEW,allow-sph-to-jp,GRPNET-ap-ph-sph-all-001,Any,GRPNET-jp-jp-kdc-all-002,Any,Any,Accept,Log,
+21,NEW,allow-jp-to-sph,GRPNET-jp-jp-kdc-all-002,Any,GRPNET-ap-ph-sph-all-001,Any,Any,Accept,Log,
+22,Active,allow-sph-to-all,GRPNET-ap-ph-sph-all-001,any,any,any,Any,Accept,Log,Catch up rule
