@@ -101,7 +101,7 @@ def fix_headers(df1,tdict):
 
 # code execution starts from here
 if __name__ == "__main__":
-    excluded_list = ['position','comments','log','action','logging','protocol']  #list of columns to exclude in checks
+    excluded_list = ['position','comments','log','action','logging']  #list of columns to exclude in checks
     df = pd.read_csv("input/Book7.csv")     #load csv using pandas
     tdict = get_diff(df)                    #func to get multiple object count per column
     df_1 = add_new_columns(df,tdict)        #func to insert new columns
