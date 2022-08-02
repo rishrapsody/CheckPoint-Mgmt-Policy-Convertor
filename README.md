@@ -1,6 +1,6 @@
 # CheckPoint-Mgmt-Policy-Convertor
 
-This code converts the input csv file into format acceptable by CheckPoint Management API for Bulk configuration.
+This code converts the input csv file into format acceptable by CheckPoint Management API for Bulk configuration(using Pandas DataFrame).
 ---
 
 >Example:
