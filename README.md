@@ -14,6 +14,7 @@ position	Active/New	rule name if group (grp) used	src	port	dst	port (port names)
 4	Active	allow-sgall-to-mdg-usw1-prod	GRPNET-ap-sg-rhq-all-001	Any	az-us-usw1-mdg-prd-fiori-001; az-us-usw1-mdg-lbfe-pm1-ascs-001; az-us-usw1-pwflapp01-001; az-us-usw1-pwflapp02-001; az-us-usw1-pm1lapp10-001; az-us-usw1-pm1lapp11-001	Any	https; sap-ms-3600	Accept	None	
 5	Active	allow-sgall-to-grc-usw1-prod	GRPNET-ap-sg-rhq-all-001	Any	az-us-usw1-pgrlapp01-001	Any	https; sap-disp-3200; sap-gw-3300	Accept	None	
 ```
+<img width="1170" alt="image" src="https://user-images.githubusercontent.com/37843190/182290833-cc8088a3-bb38-4af1-b154-0c65c361345f.png">
 
 
 >Output:
@@ -26,6 +27,8 @@ position	Active/New	rule name if group (grp) used	src.1	src.2	port	dst.1	dst.2	d
 3	Active	allow-sgall-to-s4-usw1-prod	GRPNET-ap-sg-rhq-all-001	GRPNET-ap-sg-rhq-all-001	Any	az-us-usw1-s4-prd-fiori-001	az-us-usw1-s4-lbfe-ps1-ascs-001	az-us-usw1-pwflapp01-001	az-us-usw1-pwflapp02-001	az-us-usw1-ps1lapp10-001	az-us-usw1-ps1lapp11-001	az-us-usw1-ps1lapp11-001	az-us-usw1-ps1lapp11-001	az-us-usw1-ps1lapp11-001	az-us-usw1-ps1lapp11-001	az-us-usw1-ps1lapp11-001	az-us-usw1-ps1lapp11-001	az-us-usw1-ps1lapp11-001	az-us-usw1-ps1lapp11-001	az-us-usw1-ps1lapp11-001	az-us-usw1-ps1lapp11-001	Any	https	sap-ms-3645	sap-disp-3202	sap-disp-3203	sap-disp-3203	sap-disp-3203	sap-disp-3203	sap-disp-3203	sap-disp-3203	sap-disp-3203	sap-disp-3203	sap-disp-3203	sap-disp-3203	sap-disp-3203	Accept	None	NA
 4	Active	allow-sgall-to-mdg-usw1-prod	GRPNET-ap-sg-rhq-all-001	GRPNET-ap-sg-rhq-all-001	Any	az-us-usw1-mdg-prd-fiori-001	az-us-usw1-mdg-lbfe-pm1-ascs-001	az-us-usw1-pwflapp01-001	az-us-usw1-pwflapp02-001	az-us-usw1-pm1lapp10-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	az-us-usw1-pm1lapp11-001	Any	https	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	sap-ms-3600	Accept	None	NA
 ```
+<img width="1332" alt="image" src="https://user-images.githubusercontent.com/37843190/182290574-3876c3d0-691d-4bc8-834c-af5aadae72b8.png">
+
 
 Cell values are duplicated across remaining column enteries,wherever object/group count is less than max.
 
