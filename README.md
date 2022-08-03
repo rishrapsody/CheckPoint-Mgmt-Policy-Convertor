@@ -33,7 +33,7 @@ position	Active/New	rule name if group (grp) used	src.1	src.2	port	dst.1	dst.2	d
 Cell values are duplicated across remaining column enteries,wherever object/group count is less than max.
 
 ---
-Process:
+Steps:
 1. Convert your .xlxs into .csv format
 2. Change the input file path in the pythin script at line no. 105
 ```df = pd.read_csv("input/Book7.csv")```
